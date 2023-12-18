@@ -521,7 +521,7 @@ function extractEmails(str) {
  */
 function encodeToRot13(str) {
   return str.replace(/[a-zA-Z]/g, function (char) {
-    const offset = char <= 'Z' ? 65 : 97; // Check if the character is uppercase or lowercase
+    const offset = char <= 'Z' ? 65 : 97;
     return String.fromCharCode(
       ((char.charCodeAt(0) - offset + 13) % 26) + offset
     );
